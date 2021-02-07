@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mohsin Sajan | Home</title>
+</head>
+<body>
+    <header class="p20">
+        <div class="container flex">
+            <div class="logo">
+                <h3 class="serif">MOHSIN</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="link" href="#aboutMe">About</a></li>
+                    <li><a class="link" href="#projects">Projects</a></li>
+                    <li class="cta"><a class='btn btn-primary' href="#contactMe"><span><img class="icon" src="./assets/contact4.svg" alt=""></span>Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <div class="banner">
+        <div class="container grid bannerWrapper">
+            <div class="main-content p150 serif">
+                <h1 class="serif">Hi, I am</h1>
+                <h1 class="colorPrimary serif">Mohsin Sajan</h1>
+                <p class="sans-serif">A QA turned Full Stack Web Developer</p>
+            </div>
+            <div class="bannerImage">
+                <img src="./assets/programmer2.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="aboutMe p100" id='aboutMe'>
+        <div class="container">
+            <div class="content">
+                <h1 class="serif">About Me</h1>
+                <div class="description sans-serif">
+                    <p> Hi, I am Mohsin Sajan, a QA turned self taught Full Stack Developer from India.</p>
+                    <p> In my second year working as a QA I started learning Python for Automation and I found that I actually liked programming. 
+                        I realized that I actually enjoyed the process of creating something of my own and thus started my journey into the programming world.
+                        I started learning <span class="colorSecondary tertiaryBackground">HTML,CSS</span> and <span class="colorSecondary tertiaryBackground">JS</span> and started doing small projects like a Todo App and such. But it wasn't until 2020 that I decided to seriously consider moving into Web Development and started learning
+                        and building some big projects.
+                    </p>
+                    <p> So far into my journey I have learnt <span class="colorSecondary tertiaryBackground">HTML CSS JS React</span> and <span class="tertiaryBackground colorSecondary">Django.</span>
+                        Django was the first framework I learnt and I fell in love with it, hence I decided to improve my Django knowledge and learn how well I can integrate Django with React(another framework that I absolutely love). </p>
+                    <p>Having known the hardships and doubts that a self taught developer faces, my aim is to give back to community and help programming newbies in any way I  can.</p>
+                    <h4 class="sans-serif">My Current Stack of Languages/Technologies</h4>
+                    <h3>HTML5 - CSS3 - JAVASCRIPT - REACT - REDUX - FIREBASE - DJANGO - POSTGRESQL</h3>
+
+                    <br>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary"><span><img class="icon" src="./assets/download.svg" alt=""></span>Download CV</a>
+                <a href="#" class="btn btn-secondary"><span><img class="icon" src="./assets/view.svg" alt=""></span>View Projects</a>
+            </div>
+        </div>
+    </div>
+    <div class="projects p100" id="projects">
+        <div class="container content">
+            <h1 class="serif">Projects</h1>
+            <p class="mb50">so far ... </p>
+            <div class="projects-section">
+                <div class="project">
+                    <h3 class="serif">Blog App</h3>
+                    <div class="project-details grid">
+                        <img class='gridImage' src="./assets/blog.PNG" alt="">
+                        <div class="project-description">
+                            <p>A Blog app created with Django in the backend and Vanilla JS in the front end.
+                                This app has login and signup features and complete with CRUD funciontality.
+                                The blogs and user data is stored in SQLite Db and the app is hosted on Heroku
+                            </p>
+                            <span class='project-stack'>HTML5 - CSS3 - VANILLA JAVASCRIPT - DJANGO</span>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-primary"><span><img class="icon" src="./assets/link.svg" alt=""></span>VIEW PROJECT</a>
+                                <a href="#" class="btn btn-secondary"><span><img class="icon" src="./assets/github.svg" alt=""></span>VIEW SOURCE CODE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3 class="serif">Social Media App</h3>
+                    <div class="project-details reverseCol grid">
+                        <div class="project-description">
+                            <p>
+                                This is the project that I am most proud of. This is a Social Media clone built using React, where a user can sign up and post image/text. User can view other 
+                                users posts as well and like and comment on the post and get notified when other like or comment on his posts.
+                                The React front end is hooked to Firebase, which also handles the authentication.Redux is also used to handle to state in the app. The app is hosted on Firebase.
+                            </p>
+                            <span class='project-stack'>HTML5 - CSS3 - REACT - REDUX - FIREBASE</span>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-primary"><span><img class="icon" src="./assets/link.svg" alt=""></span>VIEW PROJECT</a>
+                                <a href="#" class="btn btn-secondary"><span><img class="icon" src="./assets/github.svg" alt=""></span>VIEW SOURCE CODE</a>
+                            </div>
+                        </div>
+                        <img class='gridImage' src="./assets/socialMedia.PNG" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contactUs p100" id='contactMe'>
+        <div class="container">
+            <h1 class="serif">Contact Me</h1>
+            <div class="contactUs-container grid">
+                <img class='gridImage'src="./assets/contact.svg" alt="">
+                <form >
+                    <div class="formElement-wrapper">
+                        <div class="formElement">
+                            <label for="name">Name</label><br>
+                            <input required type="text"><br>
+                            <span class="sm error" id='name-error'></span>
+                        </div>
+                        
+                        <div class="formElement">
+                            <label for="email">Email</label><br>
+                            <input required type="email"><br>
+                            <span class="sm error" id='email-error'></span>
+                        </div>
+                        
+                        <div class="formElement">
+                            <label for="message">Message</label><br>
+                            <textarea  required rows="10" cols="30" id='message'></textarea><br>
+                            <span class="sm error" id='message-error'></span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary"><span><img class="icon" src="./assets/send.svg" alt=""></span>Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footerContent flex">
+                <div></div>
+                <div class="copyright">
+                    <h3 class="serif">MOHSIN</h3>
+                    <p class="sm">COPYRIGHT © 2021, MOHSIN</p>
+                </div>
+                <div class="socialLinks">
+                    <a href="#"><span><img class='icon icon30' src="./assets/github2.svg" alt=""></span></a>
+                    <a href="#"><span><img class='icon icon30' src="./assets/linkedin.svg" alt=""></span></a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
