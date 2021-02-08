@@ -61,7 +61,7 @@ a{
 .tertiaryBackground{
     position: relative;
     font-style: italic;
-    color: var(--secondary);
+    color: var(--dark);
     font-weight: 600;
     display: inline-block;
     word-break: break-word;
@@ -72,9 +72,9 @@ a{
     content: "";
     z-index: -1;
     position: absolute;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
-    height: 100%;
+    height: 40%;
     width: 100%;
     transform: rotate(2deg);
     padding:0 2px;
@@ -319,7 +319,7 @@ button .icon{
 }
 .error{
     color: #ff165d;
-    font-weight: bold;
+    font-weight: normal;
 }
 /* footer */
 
@@ -329,11 +329,11 @@ footer{
     text-align: center;
 }
 .footerContent{
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .footerContent h3, .footerContent p{
     color: white;
-    margin-bottom: 10px;
 }
 .sm{
     font-size: 12px;
@@ -430,5 +430,12 @@ footer{
     }
     .footerContent{
         font-size: 14px;
+    }
+    .footerContent h3{
+        font-size: 16px;
+    }
+    .socialLinks .icon{
+        width: 20px;
+        height: 20px;
     }
   }
