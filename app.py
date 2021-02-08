@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request
 import json
 import smtplib
 import logging
-
+import os
 
 app = Flask(__name__)
 
@@ -29,16 +29,17 @@ def triggerMail(data):
 
     
     logging.info(f"User Name:{name},Email:{email},Message:{query}")
-
+    sender_email =  os.environ.get('EMAIL')
+    sender_password = os.environ.get('PASSWORD')
 
     try:
-        smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+        smtpObj = smtplib.SMTP('smtp-mail.outlook.com', 587)
         smtpObj.starttls()
-        s.login("sender_email_id", "sender_email_id_password")
+        smtpObj.login("sender_email_id", "sender_email_id_password")
         message = f"User Name:{name},\nEmail: {email}, \nMessage: {query}" 
         smtpObj.sendmail(sender, receivers, message)      
         print ("Successfully sent email")
-        s.quit()
+        smtpObj.quit()
     except:
         print ("Error: unable to send email")
 

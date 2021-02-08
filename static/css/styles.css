@@ -249,12 +249,24 @@ header nav ul li{
     line-height: 1.5;
 }
 .project-description .project-stack {
-    font-weight: bold;
-    color: var(--primary);
     margin-right: 10px;
     margin-bottom: 30px;
     display: inline-block;
 }
+
+.tag{
+    font-size:12px;
+    padding:2px 8px;
+    background-color: rgba(255, 187, 71, 1);
+    color: white;
+    margin-left: 20px;
+    border-radius:10px;
+}
+.tag:first-child{
+    margin-left: 0px;
+}
+
+
 /* contact us */
 .contactUs{
     margin-bottom: 100px;
@@ -321,8 +333,10 @@ button .icon{
     color: #ff165d;
     font-weight: normal;
 }
-/* footer */
 
+
+
+/* footer */
 footer{
     background-color: var(--primary);
     padding: 20px 0;
@@ -372,9 +386,18 @@ footer{
     .aboutMe{
         padding-top: 0px;
     }
+    .aboutMe h1{
+        font-size: 24px;
+    }
     .description{
         line-height: 1.7;
         font-size: 14px;
+    }
+    .projects h1{
+        font-size: 24px;
+    }
+    .content h1{
+        margin-bottom: 0px;
     }
     .project{
         margin-bottom: 30px;
@@ -408,6 +431,7 @@ footer{
     }
 
     .contactUs h1{
+        font-size: 24px;
         margin-bottom: 50px;
     }
     .formElement-wrapper{
