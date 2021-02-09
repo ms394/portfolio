@@ -19,7 +19,7 @@ def homepage():
 def send_mail():
     data = json.loads(request.data)
     # send email
-    triggerMail(data)
+    response = triggerMail(data)
     return {'message': 'Success'}
 
 
@@ -27,7 +27,6 @@ def triggerMail(data):
     name = data['name']
     email = data['email']
     query = data['message']
-    print(os.getenv('PASSWORD'))
     sender = os.getenv('EMAIL')
     receiver = os.getenv('EMAIL')
 
@@ -37,7 +36,7 @@ def triggerMail(data):
 
     msg['From']=sender
     msg['To']=receiver
-    msg['Subject']='This is TEST'
+    msg['Subject']='Site Visitor left a message'
 
     msg.attach(MIMEText(message_body, 'plain'))
 
