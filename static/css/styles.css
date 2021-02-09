@@ -317,6 +317,17 @@ textarea{
    
     background-color: rgba(18, 126, 177, 0.1);
 }
+.feedBack p {
+    width: 80%;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    text-align: center;
+    /* background-color: lightgreen; */
+    color: white;
+    font-weight: bold;
+    display: none;
+}
 
 .gridImage{
     width:90%
@@ -358,6 +369,21 @@ footer{
     height: 30px;
 }
 
+.loader{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    background-color: rgba(33, 33, 33, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.none{
+    display: none;
+}
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     header nav ul li{

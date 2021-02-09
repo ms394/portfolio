@@ -20,15 +20,24 @@ def send_mail():
     data = json.loads(request.data)
     # send email
     response = triggerMail(data)
-    return {'message': 'Success'}
+    if response =='success':
+        message = 'Success'
+    else:
+        message = 'Error'
+    return {'message': message}
+    
 
 
 def triggerMail(data):
     name = data['name']
     email = data['email']
     query = data['message']
-    sender = os.getenv('EMAIL')
-    receiver = os.getenv('EMAIL')
+    senderEmail = 'mohsinsajan@hotmail.com'
+    #os.getenv('EMAIL')
+    senderPassword = 'Voldemort@666'
+    #os.getenv('PASSWORD')
+    sender = senderEmail
+    receiver = senderEmail
 
     msg = MIMEMultipart()
 
@@ -40,16 +49,19 @@ def triggerMail(data):
 
     msg.attach(MIMEText(message_body, 'plain'))
 
+    try:
+        smtpObj = smtplib.SMTP('smtp-mail.outlook.com', 587)
+        smtpObj.ehlo()
+        smtpObj.starttls()
+        smtpObj.login(sender, senderPassword)
 
-    smtpObj = smtplib.SMTP('smtp-mail.outlook.com', 587)
-    smtpObj.ehlo()
-    smtpObj.starttls()
-    smtpObj.login(sender, os.getenv('PASSWORD'))
 
-
-    text = msg.as_string()
-    smtpObj.sendmail(sender, receiver , text)
-    smtpObj.quit()
+        text = msg.as_string()
+        smtpObj.sendmail(sender, receiver , text)
+        smtpObj.quit()
+        return 'success'
+    except:
+        return 'error'
 
 
 

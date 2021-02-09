@@ -136,7 +136,11 @@
                     </div>
                     
                     <button class="btn btn-primary"><span><img class="icon" src="{{url_for('static',filename='assets/send.svg')}}" alt=""></span>SEND MESSAGE</button>
+                    <div class="feedBack">
+                        <p>Thank You for reaching out! I will get back to you soon.</p>
+                    </div>
                 </form>
+
             </div>
         </div>
         
@@ -154,6 +158,9 @@
             
         </div>
     </footer>
+    <div class="loader none">
+        <img src="{{ url_for('static', filename='assets/ajax-loader.gif') }}" alt="">
+    </div>
 </body>
 <script src="{{url_for('static',filename='js/main.js')}}"></script>
 </html>

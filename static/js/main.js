@@ -34,9 +34,23 @@ const send_mail = (username, email, message)=>{
         'email': email,
         'message':message
     }
-
-    fetch('/send_mail', {method:'POST', body:JSON.stringify(data)})
-    .then(response=>console.log(response))
+    loader = document.querySelector('.loader')
+    let promise = fetch('/send_mail', {method:'POST', body:JSON.stringify(data)})
+    loader.classList.remove('none')
+    promise.then(response=>{
+        loader.classList.add('none')
+        return response.json()
+    })
+    .then(data=>{
+        if(data.message == 'Success'){
+            document.querySelector('.feedBack p').style.display = 'block'
+            document.querySelector('.feedBack p').style.background = '#39DB80'
+        }else{
+            document.querySelector('.feedBack p').style.display = 'block'
+            document.querySelector('.feedBack p').style.background = 'lightsalmon'
+        }
+    })
+    
 }
 
 
