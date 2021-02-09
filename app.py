@@ -24,7 +24,7 @@ def send_mail():
         message = 'Success'
     else:
         message = 'Error'
-    return {'message': message}
+    return {'message': message} 
     
 
 
@@ -32,20 +32,30 @@ def triggerMail(data):
     name = data['name']
     email = data['email']
     query = data['message']
-    senderEmail = os.getenv('EMAIL')
-    senderPassword = os.getenv('PASSWORD')
+    senderEmail = 'mohsinsajan@hotmail.com'
+    #os.getenv('EMAIL')
+    senderPassword = 'Voldemort@666'
+    #os.getenv('PASSWORD')
     sender = senderEmail
     receiver = senderEmail
 
     msg = MIMEMultipart()
 
-    message_body = f'User - {name}, User Email - {email}, Message - {query}'
-
+    message_body = name+' left the following message \\n'+query+'\\nYou can reach out to him at '+email
+    message_html = '''
+                        <html>
+                            <body>
+                                <p>{name} left you the following message</p>
+                                <p style="font-style:italic">" {query} "<p>
+                                <p>You can reach out to him at - {email}</p>
+                            </body>
+                        </html>
+                   '''.format(name=name, query=query, email=email)
     msg['From']=sender
     msg['To']=receiver
-    msg['Subject']='Site Visitor left a message'
+    msg['Subject']=f'{name} sent you a message.'
 
-    msg.attach(MIMEText(message_body, 'plain'))
+    msg.attach(MIMEText(message_html, 'html'))
 
     try:
         smtpObj = smtplib.SMTP('smtp-mail.outlook.com', 587)
