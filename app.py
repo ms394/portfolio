@@ -32,10 +32,8 @@ def triggerMail(data):
     name = data['name']
     email = data['email']
     query = data['message']
-    senderEmail = 'mohsinsajan@hotmail.com'
-    #os.getenv('EMAIL')
-    senderPassword = 'Voldemort@666'
-    #os.getenv('PASSWORD')
+    senderEmail = os.getenv('EMAIL')
+    senderPassword = os.getenv('PASSWORD')
     sender = senderEmail
     receiver = senderEmail
 
