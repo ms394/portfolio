@@ -98,8 +98,12 @@ header{
     z-index: 20;
     background: var(--secondary);
     box-shadow: 0 0.5rem 2rem var(--shadow-color);
-    transition: background 0.2s ease-out 0s;
 }
+
+header #hamburger-menu{
+    display: none;
+}
+
 header nav ul{
     display: flex;
     align-items: center;
@@ -384,17 +388,58 @@ footer{
 .none{
     display: none;
 }
+
+
+
+/* Hamburger Code */
+  
+
+
+
+
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     header nav ul li{
         font-size: 12px;
-        
     }
     header ul li .btn{
         padding: 5px 8px;
     }
+    
+    header .topnav{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        justify-content: space-between;
+        
+    }
+    header .logo{
+        grid-column: 1/2;
+    }
+    header #hamburger-menu{
+        display: block;
+        grid-column: 2/3;
+    }
+    header nav#myLinks{
+        display: none;
+        transition: 0.5s ease-in-out all;
+    }
+    
+    header nav ul {
+        transition: 1s ease-in-out all;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }   
+
     header nav ul li{
-        margin-left:10px;
+        margin-left: 0px;
+        margin-bottom:10px;
+    }
+    header nav ul li:first-child{
+        margin-top: 10px;
+    }
+    header nav ul li:last-child{
+        margin-bottom: 0px;
     }
 
     .p150{

@@ -71,4 +71,16 @@ form.addEventListener('submit',(e)=>{
 })
 
 
-
+function toggleHamburgerMenu() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      document.querySelector(".fa").classList.remove('fa-times')
+      document.querySelector(".fa").classList.add('fa-bars')
+    } else {
+      x.style.display = "block";
+      document.querySelector(".fa").classList.add('fa-times')
+      document.querySelector(".fa").classList.remove('fa-bars')
+    }
+  }
+document.querySelector('#hamburger-menu').addEventListener('click', toggleHamburgerMenu)

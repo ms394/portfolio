@@ -10,16 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
     <title>Mohsin Sajan | Home</title>
 </head>
 <body>
     <header class="p20">
-        <div class="container flex">
+        <div class="container flex topnav">
             <div class="logo">
                 <h3 class="serif">MOHSIN</h3>
             </div>
-            <nav>
+            <a href="#" id='hamburger-menu'><i class="fa fa-bars"></i></i>
+            </a>
+            <nav id="myLinks">
                 <ul>
                     <li><a class="link" href="#aboutMe">About</a></li>
                     <li><a class="link" href="#projects">Projects</a></li>
